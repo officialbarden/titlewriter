@@ -1,0 +1,1 @@
+execute as @a[tag=title.lerp.show] at @s run function tl:title_private/show_title/1
