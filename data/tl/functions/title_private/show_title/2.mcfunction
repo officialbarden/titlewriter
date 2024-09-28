@@ -3,6 +3,7 @@ $data modify storage tl:values Titles[{username:$(username)}].title.list_2 appen
 
 $data remove storage tl:values Titles[{username:$(username)}].title.list_1[0]
 
+#> lines 7 and 9 add a "_" at the end of every character display, comment these two lines to remove that effect!
 $data modify storage tl:values Titles[{username:$(username)}].title.list_2 append value "_"
 $function tl:title_private/show_title/3 with storage tl:values Titles[{username:$(username)}].title
 $data remove storage tl:values Titles[{username:$(username)}].title.list_2[-1]
