@@ -1,13 +1,12 @@
 # macros:
 # $(text)
 # $(tick)
-# $(username)
 # $(location)
 # $(sound)
 
-$data remove storage tl:values Titles[{"username":$(username)}]
-$data modify storage tl:values Titles append value {"username":$(username),"text":$(text),"sleepTicks":$(tick),title:{"location":$(location),"sound":$(sound)}}
-
+$data modify storage tl:values Titles append value {"text":$(text),"sleepTicks":$(tick),title:{"location":$(location),"sound":$(sound)}}
+function tl:title_private/username
+function tl:title_private/delete_username with storage tl:temp profile
 
 # split_string init
     scoreboard objectives remove string.math
@@ -25,9 +24,9 @@ $data modify storage tl:values Titles append value {"username":$(username),"text
         data modify storage tl:temp string.text set from storage tl:values Titles[-1].text
 
 
-$execute as $(username) at @s run function tl:title_private/split_string with storage tl:temp string
+execute as @s at @s run function tl:title_private/split_string with storage tl:temp string
 data modify storage tl:values Titles[-1].title.list_1 set from storage tl:temp string.list
-$tag $(username) add title.lerp.show
-$scoreboard players set $(username) title.lerp.value $(tick)
-$scoreboard players set $(username) title.lerp.timer $(tick)
-$scoreboard players reset $(username) title.lerp.iteration
+tag @s add title.lerp.show
+$scoreboard players set @s title.lerp.value $(tick)
+$scoreboard players set @s title.lerp.timer $(tick)
+scoreboard players reset @s title.lerp.iteration
