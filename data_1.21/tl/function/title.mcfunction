@@ -4,7 +4,7 @@
 # $(location)
 # $(sound)
 
-$data modify storage tl:values Titles append value {"text":$(text),"sleepTicks":$(tick),title:{"location":$(location),"sound":$(sound)}}
+$data modify storage tl:values Titles append value {"text":"$(text)","sleepTicks":$(tick),title:{"location":$(location),"sound":"$(sound)"}}
 function tl:title_private/username
 function tl:title_private/delete_username with storage tl:temp profile
 
