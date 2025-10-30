@@ -3,7 +3,7 @@
 
 # How to use
 ```
-/function tl:title {"text":"Title Writer by barden!","tick":10,"location":"actionbar/title","sound":"block.note_block.bit master @s ~ ~ ~ 1 2 1", args:{font:"minecraft:default",is_bold:FALSE,is_italic:FALSE}}
+/function tl:title {"text":"Title Writer by barden!","tick":10,"location":"actionbar","sound":"block.note_block.bit master @s ~ ~ ~ 1 2 1", args:{font:"minecraft:default",is_bold:FALSE,is_italic:FALSE}}
 ```
 ```
 To use this datapack, you'll have to run a function file "tl:title" with a set of parameters inside `{..}`. These are the following:
